@@ -45,7 +45,7 @@ while True:
         disp.image(image)
         disp.display()
 
-	nearby_devices = bluetooth.discover_devices(duration=5, lookup_names=True)
+	nearby_devices = bluetooth.discover_devices(duration=10, lookup_names=True)
 
 	print("found %d devices" % len(nearby_devices))
 
