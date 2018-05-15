@@ -50,7 +50,7 @@ while True:
 	print("found %d devices" % len(nearby_devices))
 
 	for addr, name in nearby_devices:
-		if (name == "HC-05") or (name == "HC-03") or (name == "HC-06"):
+		if (name == "HC-05") or (name == "HC-03") or (name == "HC-06") or (len(name) >= 5 and name.isalnum()):
 			draw.rectangle((0, 0, width, height), outline=0, fill=0)
 			draw.text((0, 12), "Potential skimmer", font=font, fill=255)
 			draw.text((0, 24), name + " found.", font=font, fill=255)
