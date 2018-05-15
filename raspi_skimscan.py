@@ -26,6 +26,9 @@ SPI_DEVICE = 0
 
 disp = Adafruit_SSD1306.SSD1306_128_64(rst=RST, dc=DC, spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE, max_speed_hz=8000000))
 disp.begin()
+
+time.sleep(3)
+
 disp.clear()
 disp.display()
 width = disp.width
@@ -36,8 +39,6 @@ draw = ImageDraw.Draw(image)
 font = ImageFont.load_default()
 ellipsis = ".   "
 phase = 0
-
-time.sleep(3)
 
 while True:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
